@@ -1,1 +1,1 @@
-# -udemyTheCompleteJavaScriptCourse
+# udemyTheCompleteJavaScriptCourse
