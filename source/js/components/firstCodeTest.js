@@ -13,7 +13,7 @@ const firstCodeTest = {
 
     let bmiResult = markBmi > johnBmi;
 
-    console.log("Mark's BMI is higher than Johns: " + bmiResult);
+    console.log("Mark's BMI is higher than John's: " + bmiResult);
   }
 };
 
