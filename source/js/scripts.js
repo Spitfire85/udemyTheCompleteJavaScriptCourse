@@ -7,7 +7,7 @@ const jsCourse = {
     root.classList.remove('no-js');
     root.classList.add('js');
     // firstCodeTest.init();
-    secondCodeTest.init();
+    // secondCodeTest.init();
 
     // let firstName = 'John';
     // let age = 17;
@@ -76,6 +76,8 @@ const jsCourse = {
     // } else {
     //   console.log('The === operator does not do type coercion');
     // }
+
+    
   }
 };
 

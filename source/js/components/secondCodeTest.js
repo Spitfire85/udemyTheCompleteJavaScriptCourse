@@ -26,59 +26,79 @@ const secondCodeTest = {
     let maryGame3 = 105;
     let maryGameAverage = (maryGame1 + maryGame2 + maryGame3) / 3;
 
-    if (johnGameAverage === mikeGameAverage) {
-      console.log("John's team " + johnGameAverage + " Mikes's team " + mikeGameAverage + '. The game is a draw');
-    } else if (johnGameAverage < mikeGameAverage) {
-      console.log("John's team " + johnGameAverage + " Mikes's team " + mikeGameAverage + ". Mike's team won");
-    } else if (johnGameAverage > mikeGameAverage) {
-      console.log("John's team " + johnGameAverage + " Mikes's team " + mikeGameAverage + ". John's team won");
+    // if (johnGameAverage > mikeGameAverage) {
+    //   console.log("John's team " + johnGameAverage + " Mikes's team " + mikeGameAverage + ". John's team won");
+    // } else if (mikeGameAverage > johnGameAverage) {
+    //   console.log("John's team " + johnGameAverage + " Mikes's team " + mikeGameAverage + ". Mike's team won");
+    // } else {
+    //   console.log("John's team " + johnGameAverage + " Mikes's team " + mikeGameAverage + '. The game is a draw');
+    // }
+
+    if (johnGameAverage > mikeGameAverage && johnGameAverage > maryGameAverage) {
+      console.log(
+        "Mary's team " +
+          maryGameAverage +
+          " John's team " +
+          johnGameAverage +
+          " Mikes's team " +
+          mikeGameAverage +
+          ". Johns's team won"
+      );
+    } else if (mikeGameAverage > johnGameAverage && mikeGameAverage > maryGameAverage) {
+      console.log(
+        "Mary's team " +
+          maryGameAverage +
+          " John's team " +
+          johnGameAverage +
+          " Mikes's team " +
+          mikeGameAverage +
+          ". Mike's team won"
+      );
+    } else if (maryGameAverage > johnGameAverage && maryGameAverage > mikeGameAverage) {
+      console.log(
+        "Mary's team " +
+          maryGameAverage +
+          " John's team " +
+          johnGameAverage +
+          " Mikes's team " +
+          mikeGameAverage +
+          ". Mary's team won"
+      );
+    } else {
+      console.log(
+        "Mary's team " +
+          maryGameAverage +
+          " John's team " +
+          johnGameAverage +
+          " Mikes's team " +
+          mikeGameAverage +
+          '. The game is a draw'
+      );
     }
 
-    switch (true) {
-      case mikeGameAverage > johnGameAverage && maryGameAverage:
-        console.log(
-          "Mary's team " +
-            maryGameAverage +
-            "John's team " +
-            johnGameAverage +
-            " Mikes's team " +
-            mikeGameAverage +
-            ". Mike's team won"
-        );
-        break;
-      case johnGameAverage > mikeGameAverage && maryGameAverage:
-        console.log(
-          "Mary's team " +
-            maryGameAverage +
-            " John's team " +
-            johnGameAverage +
-            " Mikes's team " +
-            mikeGameAverage +
-            ". Johns's team won"
-        );
-        break;
-      case maryGameAverage > mikeGameAverage && johnGameAverage:
-        console.log(
-          "Mary's team " +
-            maryGameAverage +
-            " John's team " +
-            johnGameAverage +
-            " Mikes's team " +
-            mikeGameAverage +
-            ". Mary's team won"
-        );
-        break;
-      default:
-        console.log(
-          "Mary's team " +
-            maryGameAverage +
-            " John's team " +
-            johnGameAverage +
-            " Mikes's team " +
-            mikeGameAverage +
-            '. The game is a draw'
-        );
-    }
+    // if (johnGameAverage > mikeGameAverage && johnGameAverage > maryGameAverage) {
+    //   console.log("Johns's team won");
+    // } else if (mikeGameAverage > johnGameAverage && mikeGameAverage > maryGameAverage) {
+    //   console.log("Mike's team won");
+    // } else if (maryGameAverage > johnGameAverage && maryGameAverage > mikeGameAverage) {
+    //   console.log("Mary's team won");
+    // } else {
+    //   console.log('The game is a draw');
+    // }
+
+    // switch (true) {
+    //   case mikeGameAverage > johnGameAverage && maryGameAverage:
+    //     console.log("Mary's team " + maryGameAverage + " John's team " + johnGameAverage + " Mikes's team " + mikeGameAverage + ". Mike's team won");
+    //     break;
+    //   case johnGameAverage > mikeGameAverage && maryGameAverage:
+    //     console.log("Mary's team " + maryGameAverage + " John's team " + johnGameAverage + " Mikes's team " + mikeGameAverage + ". Johns's team won");
+    //     break;
+    //   case maryGameAverage > mikeGameAverage && johnGameAverage:
+    //     console.log("Mary's team " + maryGameAverage + " John's team " + johnGameAverage + " Mikes's team " + mikeGameAverage + ". Mary's team won");
+    //     break;
+    //   default:
+    //      console.log("Mary's team " + maryGameAverage + " John's team " + johnGameAverage + " Mikes's team " + mikeGameAverage + ". The game is a draw");
+    // }
   }
 };
 
