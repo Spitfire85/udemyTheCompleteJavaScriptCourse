@@ -77,7 +77,15 @@ const jsCourse = {
     //   console.log('The === operator does not do type coercion');
     // }
 
-    
+    function calculateAge(birthYear) {
+      return 2019 - birthYear;
+    }
+
+    var ageJohn = calculateAge(34);
+    var ageMike = calculateAge(25);
+    var ageJane = calculateAge(19);
+
+    console.log(ageJohn, ageMike, ageJane);
   }
 };
 
