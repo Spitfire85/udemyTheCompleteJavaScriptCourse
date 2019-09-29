@@ -15,30 +15,46 @@ const thirdCodeTest = {
     (NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
     GOOD LUCK 😀
     */
-    var tipArr = [];
-    var tipBillArr = [];
+    // var tipArr = [];
+    // var tipBillArr = [];
 
+    // first
+    // function tipCalc(billAmount) {
+    //   if (billAmount < 50) {
+    //     var tipAmount = (billAmount * 20) / 100;
+    //     tipArr.push(tipAmount);
+    //     tipBillArr.push(tipAmount + billAmount);
+    //   } else if (billAmount < 200) {
+    //     var tipAmount = (billAmount * 15) / 100;
+    //     tipArr.push(tipAmount);
+    //     tipBillArr.push(tipAmount + billAmount);
+    //   } else {
+    //     var tipAmount = (billAmount * 10) / 100;
+    //     tipArr.push(tipAmount);
+    //     tipBillArr.push(tipAmount + billAmount);
+    //   }
+    // }
+    // console.log(tipArr, tipBillArr);
+
+    var billArr = [124, 48, 268];
+    var tipArr = [tipCalc(billArr[0]), tipCalc(billArr[1]), tipCalc(billArr[2])];
+    var tipBillArr = [billArr[0] + tipArr[0], billArr[1] + tipArr[1], billArr[2] + tipArr[2]];
+
+    // second
     function tipCalc(billAmount) {
+      var percentage;
       if (billAmount < 50) {
-        var tipAmount = (billAmount * 20) / 100;
-        tipArr.push(tipAmount);
-        tipBillArr.push(tipAmount + billAmount);
+        percentage = 0.2;
       } else if (billAmount < 200) {
-        var tipAmount = (billAmount * 15) / 100;
-        tipArr.push(tipAmount);
-        tipBillArr.push(tipAmount + billAmount);
+        percentage = 0.15;
       } else {
-        var tipAmount = (billAmount * 10) / 100;
-        tipArr.push(tipAmount);
-        tipBillArr.push(tipAmount + billAmount);
+        percentage = 0.1;
       }
+
+      return percentage * billAmount;
     }
 
-    tipCalc(124);
-    tipCalc(48);
-    tipCalc(268);
-    console.log(tipArr);
-    console.log(tipBillArr);
+    console.log(tipArr, tipBillArr);
   }
 };
 
