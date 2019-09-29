@@ -13,4 +13,12 @@ Export default vs Named Export
 https://stackoverflow.com/questions/33611812/export-const-vs-export-default-in-es6
 https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
 
+When to use a function declaration vs. a function expression
+https://www.freecodecamp.org/news/when-to-use-a-function-declarations-vs-a-function-expression-70f15152a0a0/
 
+Expressions vs Statements
+Expressions return a result
+Delclartions/Statements perform an action no instant result
+
+Array methods
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2

@@ -1,5 +1,6 @@
 import firstCodeTest from './components/firstCodeTest';
 import secondCodeTest from './components/secondCodeTest';
+import thirdCodeTest from './components/thirdCodeTest';
 
 const jsCourse = {
   init() {
@@ -8,6 +9,21 @@ const jsCourse = {
     root.classList.add('js');
     // firstCodeTest.init();
     // secondCodeTest.init();
+    thirdCodeTest.init();
+
+    // Fizz buss
+    // var i = 1;
+    // for (i; i < 101; i++) {
+    //   if (i % 5 === 0) {
+    //     console.log('Fizz');
+    //   } else if (i % 3 === 0) {
+    //     console.log('Buzz');
+    //   } else if (i % 15 === 0) {
+    //     console.log('FizzBuzz');
+    //   } else {
+    //     console.log(i);
+    //   }
+    // }
 
     // let firstName = 'John';
     // let age = 17;
@@ -77,15 +93,79 @@ const jsCourse = {
     //   console.log('The === operator does not do type coercion');
     // }
 
-    function calculateAge(birthYear) {
-      return 2019 - birthYear;
-    }
+    //Basic Functions - 20
+    // function calculateAge(birthYear) {
+    //   return 2019 - birthYear;
+    // }
 
-    var ageJohn = calculateAge(34);
-    var ageMike = calculateAge(25);
-    var ageJane = calculateAge(19);
+    // var ageJohn = calculateAge(34);
+    // var ageMike = calculateAge(25);
+    // var ageJane = calculateAge(19);
 
-    console.log(ageJohn, ageMike, ageJane);
+    // console.log(ageJohn, ageMike, ageJane);
+
+    // function yearsUntilRetirement(year, firstName) {
+    //   let age = calculateAge(year);
+    //   let retirement = 65 - age;
+
+    //   if (retirement > 0) {
+    //     console.log(firstName + ' retires in ' + retirement);
+    //   } else {
+    //     console.log(firstName + ' is retired');
+    //   }
+    // }
+
+    // yearsUntilRetirement(1985, 'Matt');
+    // yearsUntilRetirement(1983, 'Tom');
+    // yearsUntilRetirement(1953, 'Paul');
+
+    //Function statement and expression
+
+    //function declaration
+    // function whatDoYouDo (job, firstName) {
+
+    // }
+
+    //Function expression
+    // let whatDoYouDo = function(job, firstName) {
+    //   switch (job) {
+    //     case 'teacher':
+    //       return firstName + ' teaches';
+    //     case 'driver':
+    //       return firstName + ' drives';
+    //     case 'designer':
+    //       return firstName + ' designs';
+    //     default:
+    //       return firstName + ' does something different';
+    //   }
+    // };
+    // console.log(whatDoYouDo('teacher', 'Matt'));
+
+    // Arrays
+    // var names = ['John', 'Mark', 'Jane'];
+    // var years = new Array(1983, 1985, 1960);
+    // console.log(names[0], years.length);
+
+    //Mutate data
+    // names[1] = 'Ben';
+    // names[names.length] = 'Mary';
+    // // console.log(names, years.length);
+
+    // var john = ['John', 'Smith', 1990, 'designer'];
+
+    // // POP Removes the last element from an array and returns that element.
+    // // john.pop('blue');
+
+    // // PUSH Adds one or more elements to the end of an array and returns the new length of the array.
+    // john.push('blue');
+
+    // // UNSHIFT Adds one or more elements to the front of an array and returns the new length of the array.
+    // john.unshift('blue');
+
+    // // console.log(john.indexOf(1990));
+
+    // var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
+    // console.log(isDesigner);
   }
 };
 
