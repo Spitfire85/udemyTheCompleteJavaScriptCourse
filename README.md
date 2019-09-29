@@ -22,3 +22,7 @@ Delclartions/Statements perform an action no instant result
 
 Array methods
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2
+
+Spread syntax
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
