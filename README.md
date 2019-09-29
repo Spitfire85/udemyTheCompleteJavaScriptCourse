@@ -26,3 +26,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 Spread syntax
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 
+For loop
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break

@@ -2,6 +2,7 @@ import firstCodeTest from './components/firstCodeTest';
 import secondCodeTest from './components/secondCodeTest';
 import thirdCodeTest from './components/thirdCodeTest';
 import forthCodeTest from './components/forthCodeTest';
+import fifthCodeTest from './components/fifthCodeTest';
 
 const jsCourse = {
   init() {
@@ -11,7 +12,8 @@ const jsCourse = {
     // firstCodeTest.init();
     // secondCodeTest.init();
     // thirdCodeTest.init();
-    forthCodeTest.init();
+    // forthCodeTest.init();
+    fifthCodeTest.init();
 
     // Fizz buss
     // var i = 1;
@@ -217,6 +219,34 @@ const jsCourse = {
     // john.age();
 
     // console.log(john);
+
+    //LOOPS
+    // var i;
+    // for (i = 1; i <= 20; i++) {
+    //   console.log(i);
+    // }
+
+    // var john = ['John', 'Smith', 1990, 'designer', false];
+
+    //FOR LOOP
+    // var i;
+    // for (i = 0; i < john.length; i++) {
+    //   if (typeof john[i] !== 'string') continue;
+    //   console.log(john[i]);
+    // }
+
+    //FOR BACKWARDS
+    // var i;
+    // for (i = john.length - 1; i >= 0; i--) {
+    //   console.log(john[i]);
+    // }
+
+    //WHILE LOOP
+    // var i = 0;
+    // while (i < john.length) {
+    //   console.log(john[i]);
+    //   i++;
+    // }
   }
 };
 
