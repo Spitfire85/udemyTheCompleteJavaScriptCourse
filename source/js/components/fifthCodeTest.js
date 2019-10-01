@@ -1,11 +1,8 @@
 const fifthCodeTest = {
   init() {
     console.log('fifthCodeTest');
-    /*****************************
-     * CODING CHALLENGE 5
-     */
-
     /*
+    * CODING CHALLENGE 5
     Remember the tip calculator challenge? Let's create a more advanced version using everything we learned!
     This time, John and his family went to 5 different restaurants. The bills were $124, $48, $268, $180 and $42.
     John likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
@@ -22,6 +19,27 @@ const fifthCodeTest = {
     8. Log to the console which family paid the highest tips on average
     GOOD LUCK 😀
     */
+
+    let meals = {
+      billsArr: [124, 48, 268, 180, 42],
+      tipCalc: function(billAmount) {
+        var percentage;
+        if (billAmount < 50) {
+          percentage = 0.2;
+        } else if (billAmount < 200) {
+          percentage = 0.15;
+        } else {
+          percentage = 0.1;
+        }
+        
+
+        for (i = 0; i < billsArr.length; i++) {
+          this.tipCalc(billsArr);
+        }
+      }
+    };
+
+    console.log(meals.tipCalc());
   }
 };
 
