@@ -1,6 +1,6 @@
 const fifthCodeTest = {
   init() {
-    console.log('fifthCodeTest');
+    // console.log('fifthCodeTest');
     /*
     * CODING CHALLENGE 5
     Remember the tip calculator challenge? Let's create a more advanced version using everything we learned!
@@ -31,15 +31,22 @@ const fifthCodeTest = {
         } else {
           percentage = 0.1;
         }
-        
 
-        for (i = 0; i < billsArr.length; i++) {
-          this.tipCalc(billsArr);
+        var i;
+        var tipArr = [];
+        var tipBillArr = [];
+
+        for (i = 0; i < this.billsArr.length; i++) {
+          var tipAmount = percentage * this.billsArr[i];
+          tipArr.push(tipAmount);
+          tipBillArr.push(tipAmount + this.billsArr[i]);
         }
+
+        console.log(tipArr, tipBillArr);
       }
     };
 
-    console.log(meals.tipCalc());
+    meals.tipCalc();
   }
 };
 
