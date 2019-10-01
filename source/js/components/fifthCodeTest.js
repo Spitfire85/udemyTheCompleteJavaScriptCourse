@@ -11,6 +11,7 @@ const fifthCodeTest = {
     2. Add a method to calculate the tip
     3. This method should include a loop to iterate over all the paid bills and do the tip calculations
     4. As an output, create 1) a new array containing all tips, and 2) an array containing final paid amounts (bill + tip). HINT: Start with two empty arrays [] as properties and then fill them up in the loop.
+
     EXTRA AFTER FINISHING: Mark's family also went on a holiday, going to 4 different restaurants. The bills were $77, $375, $110, and $45.
     Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the bill is between $100 and $300, and 25% if the bill is more than $300 (different than John).
     5. Implement the same functionality as before, this time using Mark's tipping rules
@@ -20,7 +21,7 @@ const fifthCodeTest = {
     GOOD LUCK 😀
     */
 
-    let meals = {
+    let mealsJohn = {
       billsArr: [124, 48, 268, 180, 42],
       tipCalc: function(billAmount) {
         var percentage;
@@ -33,20 +34,51 @@ const fifthCodeTest = {
         }
 
         var i;
-        var tipArr = [];
-        var tipBillArr = [];
-
         for (i = 0; i < this.billsArr.length; i++) {
           var tipAmount = percentage * this.billsArr[i];
-          tipArr.push(tipAmount);
-          tipBillArr.push(tipAmount + this.billsArr[i]);
+          this.tipArrJohn.push(tipAmount);
+          this.tipBillArrJohn.push(tipAmount + this.billsArr[i]);
         }
 
-        console.log(tipArr, tipBillArr);
-      }
+        // console.log(tipArrJohn, tipBillArrJohn);
+      },
+      tipArrJohn: [],
+      tipBillArrJohn: []
     };
 
-    meals.tipCalc();
+    let mealsMark = {
+      billsArr: [77, 375, 110, 45],
+      tipCalc: function(billAmount) {
+        var percentage;
+        if (billAmount < 100) {
+          percentage = 0.2;
+        } else if (billAmount < 300) {
+          percentage = 0.15;
+        } else {
+          percentage = 0.1;
+        }
+
+        var i;
+        for (i = 0; i < this.billsArr.length; i++) {
+          var tipAmount = percentage * this.billsArr[i];
+          this.tipArrMark.push(tipAmount);
+          this.tipBillArrMark.push(tipAmount + this.billsArr[i]);
+        }
+
+        // console.log(tipArrMark, tipBillArrMark);
+      },
+      tipArrMark: [],
+      tipBillArrMark: []
+    };
+
+    mealsJohn.tipCalc();
+    mealsMark.tipCalc();
+
+    var johnTips = mealsJohn.tipArrJohn;
+    var markTips = mealsMark.tipArrMark;
+
+    console.log(johnTips);
+    console.log(markTips);
   }
 };
 
