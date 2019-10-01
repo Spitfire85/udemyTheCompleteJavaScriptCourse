@@ -77,8 +77,24 @@ const fifthCodeTest = {
     var johnTips = mealsJohn.tipArrJohn;
     var markTips = mealsMark.tipArrMark;
 
-    console.log(johnTips);
-    console.log(markTips);
+    function averageSpend(tips) {
+      var i;
+      var tipsAmount = tips.length;
+      var totalSum = 0;
+
+      for (i = 0; i < tips.length; i++) {
+        totalSum += tips[i];
+      }
+
+      return totalSum / tipsAmount;
+    }
+    
+    var johnAverage = averageSpend(johnTips);
+    var markAverage = averageSpend(markTips);
+
+    if (johnAverage > markAverage) {
+      console.log("John's family paid more with £" + johnAverage);
+    } else [console.log("Mark's family paid more with £" + markAverage)];
   }
 };
 
