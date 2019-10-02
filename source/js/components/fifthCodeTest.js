@@ -88,7 +88,7 @@ const fifthCodeTest = {
 
       return totalSum / tipsAmount;
     }
-    
+
     var johnAverage = averageSpend(johnTips);
     var markAverage = averageSpend(markTips);
 

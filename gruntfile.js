@@ -202,7 +202,7 @@ module.exports = grunt => {
 
       scripts: {
         files: ['source/js/**/*.js'],
-        tasks: ['newer:prettier', 'newer:eslint', 'browserify:dist']
+        tasks: ['newer:eslint', 'browserify:dist']
       },
 
       styles: {
@@ -236,16 +236,16 @@ module.exports = grunt => {
 
   // Default task(s).
   grunt.registerTask('default', [
-    'clean',
-    'copy:html',
-    'copy:config',
-    'copy:fontassets',
-    'copy:imgassets',
+    // 'clean',
+    // 'copy:html',
+    // 'copy:config',
+    // 'copy:fontassets',
+    // 'copy:imgassets',
     'codekit',
     'browserify:dist',
     // 'sasslint',
-    'sass:build',
-    'postcss',
+    // 'sass:build',
+    // 'postcss',
     'browserSync',
     'watch'
   ]);

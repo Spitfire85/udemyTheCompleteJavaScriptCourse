@@ -1,7 +1,6 @@
 const DOM = {
   init() {
-    console.log('DOM');
-
+    // console.log('DOM');
     /*
     GAME RULES:
 
@@ -12,6 +11,43 @@ const DOM = {
     - The first player to reach 100 points on GLOBAL score wins the game
 
     */
+
+    let scores = [0, 0];
+    let roundScore = 0;
+    let activePlayer = 1;
+    let playerScore = document.querySelector('#current-'+ activePlayer);
+    // playerScore.innerHTML = '<em>' + diceNumber + '</em>';
+
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+
+    let dice = document.querySelector('.dice');
+    dice.style.display='none';
+
+
+
+    let btnRoll = document.querySelector('.btn-roll');
+    btnRoll.addEventListener('click', function() {
+      //Random number
+      let diceNumber = Math.floor(Math.random() * 6) + 1;  
+
+      //Display result
+      dice.style.display='block';
+      dice.src = '/assets/img/dom/dice-' + diceNumber + '.png'
+
+      //Update round score unless it is 1
+      if (diceNumber !== 1) {
+        console.log('Not one');
+      } else {
+        console.log('SHIT! IT\'S ONE!');
+      }
+    });
+
+   
+
+
   }
 };
 
