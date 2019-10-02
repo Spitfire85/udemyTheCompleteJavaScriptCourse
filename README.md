@@ -43,4 +43,7 @@ https://medium.com/@ensallee/function-borrowing-in-javascript-4bd671e9d7b4#targe
 Composition over Inheritance
 https://www.youtube.com/watch?v=wfMtDGfHWpA
 
+XML HTTP request
+https://javascript.info/xmlhttprequest
+
 
