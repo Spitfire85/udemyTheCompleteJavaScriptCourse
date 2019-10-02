@@ -40,3 +40,7 @@ https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-pl
 Method/Function borrowing
 https://medium.com/@ensallee/function-borrowing-in-javascript-4bd671e9d7b4#targetText=Function%20borrowing%20allows%20us%20to,the%20method%20we%20are%20borrowing.
 
+Composition over Inheritance
+https://www.youtube.com/watch?v=wfMtDGfHWpA
+
+
