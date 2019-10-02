@@ -30,3 +30,13 @@ For loop
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break
+
+Function expression vs Function statement/declartion
+https://gomakethings.com/function-expressions-vs-function-declarations/#targetText=Function%20expressions%20vs.%20function%20declarations&targetText=The%20first%20example%2C%20function%20add,yet%20important%20difference%20between%20them.
+
+Hoisting
+https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-what-is-hoisting-in-javascript-a63c1b2267a1
+
+Method/Function borrowing
+https://medium.com/@ensallee/function-borrowing-in-javascript-4bd671e9d7b4#targetText=Function%20borrowing%20allows%20us%20to,the%20method%20we%20are%20borrowing.
+
