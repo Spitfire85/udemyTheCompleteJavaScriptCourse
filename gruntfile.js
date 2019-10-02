@@ -243,7 +243,7 @@ module.exports = grunt => {
     'copy:imgassets',
     'codekit',
     'browserify:dist',
-    'sasslint',
+    // 'sasslint',
     'sass:build',
     'postcss',
     'browserSync',
