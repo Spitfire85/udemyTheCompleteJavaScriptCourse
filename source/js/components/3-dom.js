@@ -32,44 +32,51 @@ const DOM = {
     let roundNumber = 100;
 
     btnRoll.addEventListener('click', function() {
-      roundNumber = document.querySelector('.round-number').value;
+      
       console.log(roundNumber);
 
       if (gamePlaying) {
         //Random number
-        let diceNumber = 6;
+        let diceNumber = Math.floor(Math.random() * 6) + 1;
 
         //Display result
         dice.style.display = 'block';
         dice.src = '/assets/img/dom/dice-' + diceNumber + '.png';
 
-        //Update round score unless it is 1
-        if (diceNumber !== 1) {
-          roundScore += diceNumber;
-
-          if (lastDice + diceNumber === 12) {
-            document.querySelector('#current-' + activePlayer).textContent = 0;
-            document.querySelector('#score-' + activePlayer).textContent = 0;
-            scores[activePlayer] = 0;
-            lastDice = 0;
-            console.log(lastDice);
-            nextPlayer();
-            console.log('LAST DICE 6');
-          }
-
-          document.querySelector('#current-' + activePlayer).textContent = roundScore;
-        } else {
+        if (lastDice === 6  && diceNumber === 6) {
+          console.log('TEST');
+          scores[activePlayer] = 0;
+          document.querySelector('#current-' + activePlayer).textContent = 0;
+          document.querySelector('#score-' + activePlayer).textContent = 0;
           nextPlayer();
-        }
+        } else if (diceNumber !== 1) {
+            roundScore += diceNumber; 
+            document.querySelector('#current-' + activePlayer).textContent = roundScore;
+          } else {
+            nextPlayer();
+          }      
+
+        lastDice = dice;
       }
     });
 
     btnHold.addEventListener('click', function() {
+      
+      
       if (gamePlaying) {
+        roundNumber = document.querySelector('.round-number').value;
+        let winningScore;
+
+        if (roundNumber) {
+          winningScore = input;
+        } else {
+          winningScore = 100;
+        }
+
         scores[activePlayer] += roundScore;
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
-        if (scores[activePlayer] >= roundNumber) {
+        if (scores[activePlayer] >= winningScore) {
           console.log('Player ' + activePlayer + ' has won!');
 
           document.querySelector('#score-' + activePlayer).textContent = 'Wins!';
