@@ -46,4 +46,9 @@ https://www.youtube.com/watch?v=wfMtDGfHWpA
 XML HTTP request
 https://javascript.info/xmlhttprequest
 
+State variables
+http://fizzy.school/state-variables
+
+Question on 3-dom.js
+
 
