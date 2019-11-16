@@ -6,6 +6,7 @@ import fifthCodeTest from './components/fifthCodeTest';
 import basics from './components/1-basics';
 import howItWorks from './components/2-how-it-works';
 import DOM from './components/3-dom';
+import objFunc from './components/4-objFunc';
 
 const jsCourse = {
   init() {
@@ -22,7 +23,7 @@ const jsCourse = {
 
     // howItWorks.init();
 
-    DOM.init();
+    objFunc.init();
   }
 };
 

@@ -103,7 +103,8 @@ body {
   font-size: 30px;
 }
 
-button {
+button,
+.round-number {
   position: absolute;
   width: 200px;
   left: 50%;
@@ -149,6 +150,11 @@ i {
 }
 .btn-hold {
   top: 467px;
+}
+
+.round-number {
+  background-color: white;
+  top: 527px;
 }
 
 .dice {
