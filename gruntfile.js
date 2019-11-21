@@ -258,7 +258,7 @@ module.exports = grunt => {
     'codekit',
     'browserify:dist',
     'uglify',
-    'sasslint',
+    // 'sasslint',
     'sass:build',
     'postcss',
     'copy:dist'

@@ -32,7 +32,6 @@ const DOM = {
     let roundNumber = 100;
 
     btnRoll.addEventListener('click', function() {
-      
       console.log(roundNumber);
 
       if (gamePlaying) {
@@ -43,26 +42,24 @@ const DOM = {
         dice.style.display = 'block';
         dice.src = '/assets/img/dom/dice-' + diceNumber + '.png';
 
-        if (lastDice === 6  && diceNumber === 6) {
+        if (lastDice === 6 && diceNumber === 6) {
           console.log('TEST');
           scores[activePlayer] = 0;
           document.querySelector('#current-' + activePlayer).textContent = 0;
           document.querySelector('#score-' + activePlayer).textContent = 0;
           nextPlayer();
         } else if (diceNumber !== 1) {
-            roundScore += diceNumber; 
-            document.querySelector('#current-' + activePlayer).textContent = roundScore;
-          } else {
-            nextPlayer();
-          }      
+          roundScore += diceNumber;
+          document.querySelector('#current-' + activePlayer).textContent = roundScore;
+        } else {
+          nextPlayer();
+        }
 
         lastDice = dice;
       }
     });
 
     btnHold.addEventListener('click', function() {
-      
-      
       if (gamePlaying) {
         roundNumber = document.querySelector('.round-number').value;
         let winningScore;

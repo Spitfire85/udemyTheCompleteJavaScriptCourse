@@ -49,6 +49,27 @@ https://javascript.info/xmlhttprequest
 State variables
 http://fizzy.school/state-variables
 
-Question on 3-dom.js
+Primitive values vs non-primitive values (object references)
+https://www.javascripttutorial.net/javascript-primitive-vs-reference-values/
+https://medium.com/@junshengpierre/javascript-primitive-values-object-references-361cfc1cbfb0
+
+Prototypes
+https://medium.com/better-programming/prototypes-in-javascript-5bba2990e04b
+
+Prototype chain
+https://dev.to/codesmith_staff/explain-javascripts-prototype-chain-like-im-five-51p
+
+Instantiation Patterns
+https://medium.com/dailyjs/instantiation-patterns-in-javascript-8fdcf69e8f9b
+
+object.create vs function constructor
+https://medium.com/@jonathanvox01/understanding-the-difference-between-object-create-and-the-new-operator-b2a2f4749358
+
+Return keyword
+https://codeburst.io/javascript-what-is-the-return-statement-97d8b11a1a0c
+
+First class functions
+Passing functions as parameters
+https://medium.com/launch-school/javascript-weekly-an-introduction-to-first-class-functions-9d069e6fb137
 
 
