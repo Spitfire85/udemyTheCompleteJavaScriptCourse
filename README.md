@@ -15,6 +15,7 @@ https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/exp
 
 When to use a function declaration vs. a function expression
 https://www.freecodecamp.org/news/when-to-use-a-function-declarations-vs-a-function-expression-70f15152a0a0/
+https://medium.com/@mandeep1012/function-declarations-vs-function-expressions-b43646042052
 
 Expressions vs Statements
 Expressions return a result
@@ -72,4 +73,15 @@ First class functions
 Passing functions as parameters
 https://medium.com/launch-school/javascript-weekly-an-introduction-to-first-class-functions-9d069e6fb137
 
+IIFE
+http://adripofjavascript.com/blog/drips/an-introduction-to-iffes-immediately-invoked-function-expressions.html
+
+Currying
+https://blog.bitsrc.io/understanding-currying-in-javascript-ceb2188c339?gi=65da6b4197b8
+
+Method borrowing
+https://medium.com/@thejasonfile/borrowing-methods-from-a-function-in-javascript-713a0beed40d
+
+Call, apply and bind
+https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
 

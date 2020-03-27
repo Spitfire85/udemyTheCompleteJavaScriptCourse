@@ -98,29 +98,29 @@ const objFunc = {
     let years = [1990, 1967, 1925, 1985, 1998];
 
     //fn parameter here is a callback function
-    function arrayCalc(arr, fn) {
-      let arrResult = [];
-      for (let i = 0; i < arr.length; i++) {
-        arrResult.push(fn(arr[i]));
-      } 
-      return arrResult;
-    }
+    // function arrayCalc(arr, fn) {
+    //   let arrResult = [];
+    //   for (let i = 0; i < arr.length; i++) {
+    //     arrResult.push(fn(arr[i]));
+    //   } 
+    //   return arrResult;
+    // }
 
-    function calculateAge(element) {
-      return 2019 - element;
-    }
+    // function calculateAge(element) {
+    //   return 2019 - element;
+    // }
 
-    function isFullAge(element) {
-      return element >= 18;
-    }
+    // function isFullAge(element) {
+    //   return element >= 18;
+    // }
 
-    function maxHeartRate(element) {
-      if (element >= 18 && element <= 81) {
-        return Math.round(206.9 - (0.67 * element));
-      } else {
-        return 'N/A';
-      }
-    }
+    // function maxHeartRate(element) {
+    //   if (element >= 18 && element <= 81) {
+    //     return Math.round(206.9 - (0.67 * element));
+    //   } else {
+    //     return 'N/A';
+    //   }
+    // }
 
     // let ages = arrayCalc(years, calculateAge);
     // console.log(ages);
@@ -133,33 +133,154 @@ const objFunc = {
 
 
     //Functions returning functions
-    function interviewQuestion(job) {
-      if (job === 'designer') {
-        return function(name) {
-          console.log(name + ' can you explain UX design?');
-        }
-      } else if (job === 'teacher') {
-        return function(name) {
-          console.log(name + ' what years do you teach?');
-        }
-      } else {
-        return function(name) {
-          console.log('Hello ' + name + ', what do you do?');
+    // function interviewQuestion(job) {
+    //   if (job === 'designer') {
+    //     return function(name) {
+    //       console.log(name + ' can you explain UX design?');
+    //     }
+    //   } else if (job === 'teacher') {
+    //     return function(name) {
+    //       console.log(name + ' what years do you teach?');
+    //     }
+    //   } else {
+    //     return function(name) {
+    //       console.log('Hello ' + name + ', what do you do?');
+    //     }
+    //   }
+    // }
+
+    // let teacherQuestion = interviewQuestion('teacher');
+    // teacherQuestion('John');
+
+    // let designerQuestion = interviewQuestion('designer');
+    // designerQuestion('Mark');
+
+    // let policeQuestion = interviewQuestion('police');
+    // policeQuestion('Peter');
+
+
+    // interviewQuestion('teacher')('Matt');
+
+    //IIFE 
+    // function game () {
+    //   const score = Math.random() * 10;
+    //   console.log(score >= 5);
+    // }
+
+    // game();
+
+    // (function(){
+    //   const score = Math.random() * 10;
+    //   console.log(score >= 5);
+    // })();
+
+    // (function(goodLuck){
+    //   const score = Math.random() * 10;
+    //   console.log(score >= 5 - goodLuck);
+    // })(10);
+    
+    // function ageTilRetirement(retirement) {
+    //   const a = ' years left until retirement';
+
+    //   return function(yearOfBirth) {
+    //     const age = 2019 - yearOfBirth;
+    //     console.log((retirement - age) + a)
+    //   }
+    // }
+
+    // ageTilRetirement(34);
+
+    // let retirementUS = ageTilRetirement(66);
+    // retirementUS(1990);
+
+    // let retirementGermany = ageTilRetirement(65);
+    // retirementGermany(1990);
+
+    // let retirementIceland = ageTilRetirement(67);
+    // retirementIceland(1990);
+
+    // function newInterview(job) {
+    //   return function(name) {
+    //     if (job === 'designer') {
+    //         console.log(name + ' can you explain UX design?');
+    //     } else if (job === 'teacher') {
+    //         console.log(name + ' what years do you teach?');
+    //     } else {
+    //         console.log('Hello ' + name + ', what do you do?');
+    //     }
+    //   }
+    // }
+
+    // let interviewName = newInterview('designer');
+
+    // interviewName('John');
+
+    // newInterview('designer')('John');
+
+    // ageTilRetirement(66)(1990);
+
+        //Functions returning functions
+    // function interviewQuestion(job) {
+    //   if (job === 'designer') {
+    //     return function(name) {
+    //       console.log(name + ' can you explain UX design?');
+    //     }
+    //   } else if (job === 'teacher') {
+    //     return function(name) {
+    //       console.log(name + ' what years do you teach?');
+    //     }
+    //   } else {
+    //     return function(name) {
+    //       console.log('Hello ' + name + ', what do you do?');
+    //     }
+    //   }
+    // }
+
+    // let teacherQuestion = interviewQuestion('teacher');
+    // teacherQuestion('John');
+
+    // let designerQuestion = interviewQuestion('designer');
+    // designerQuestion('Mark');
+
+    // let policeQuestion = interviewQuestion('police');
+    // policeQuestion('Peter');
+
+
+    // interviewQuestion('teacher')('Matt');
+
+    let john = {
+      name: 'John',
+      age: 26,
+      job: 'teacher',
+      present: function(style, timeOfDay) {
+        if (style === 'formal') {
+          console.log('Good ' + timeOfDay + ' ladies and gentlemen I\'m ' + this.name+' I\'m a ' + this.job + ' I\'m ' + this.age);
+        } else if (style === 'friendly') {
+          console.log('Sup it\'s the' + timeOfDay + 'guys and gals I\'m ' + this.name+' I\'m a ' + this.job + ' I\'m ' + this.age);
         }
       }
     }
 
-    let teacherQuestion = interviewQuestion('teacher');
-    teacherQuestion('John');
+    let emily = {
+      name: 'Emily',
+      age: 35,
+      job: 'shop keeper',
+      present: function(style, timeOfDay) {
+        if (style === 'formal') {
+          console.log('Good ' + timeOfDay + ' ladies and gentlemen I\'m ' + this.name+' I\'m a ' + this.job + ' I\'m ' + this.age);
+        } else if (style === 'friendly') {
+          console.log('Sup it\'s the ' + timeOfDay + ' guys and gals I\'m ' + this.name+' I\'m a ' + this.job + ' I\'m ' + this.age);
+        }
+      }
+    }
 
-    let designerQuestion = interviewQuestion('designer');
-    designerQuestion('Mark');
+    let johnFriendly = john.present.bind(john, 'friendly', 'morning');
 
-    let policeQuestion = interviewQuestion('police');
-    policeQuestion('Peter');
+    console.log(john.present('formal', 'morning'));
 
-    interviewQuestion('teacher')('Matt');
+    console.log(john.present.call(emily, 'friendly', 'afternoon'));
 
+    johnFriendly();
   }
 };
 
