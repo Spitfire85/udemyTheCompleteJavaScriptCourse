@@ -37,13 +37,36 @@ const codingTest7 = {
       }
     }
 
-    QuestionFunc.prototype.checkAnswer = function(answer) {
+    QuestionFunc.prototype.checkAnswer = function(answer, callback) {
+      var score;
       if (answer === this.correctAnswer) {
         console.log('You got the correct answer');
+        score = callback(true);
       } else {
         console.log('You got it wrong');
+        score = callback(false);
+      }
+
+      this.showAnswer(score);
+    }
+
+    QuestionFunc.prototype.showAnswer = function(score) {
+      console.log('Your score is ' + score);
+      console.log('--------------');
+    }
+
+    function scoreCheck() {
+      var score = 0;
+      return function (correct) {
+        if (correct) {
+          score++;
+        } 
+
+        return score;
       }
     }
+
+    var keepScore = scoreCheck();
 
     function askQuestion() {
       var questions = [question1, question2, question3];
@@ -56,7 +79,7 @@ const codingTest7 = {
       var answer = prompt('Please select the correct answer.');      
 
       if(answer !== 'exit') {
-        questions[randomQuestion].checkAnswer(parseInt(answer));
+        questions[randomQuestion].checkAnswer(parseInt(answer), keepScore);
         
         askQuestion();
       }      
