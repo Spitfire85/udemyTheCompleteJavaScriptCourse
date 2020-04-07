@@ -20,19 +20,45 @@ const codingTest7 = {
   init() {
     console.log('codingTest7');
 
-    function Question (question, answers, correctAnswer) {
+    function QuestionFunc (question, answers, correctAnswer) {
       this.question = question;
       this.answers = answers;
       this.correctAnswer = correctAnswer;
     }
 
-    var question1 = new Question('What is your name?', ['John', 'Peter', 'Matt', 'Phil'], 2);
-    var question2 = new Question('What is your favourite football team?', ['QPR', 'Reading', 'Wolves', 'Crystal Palace'], 3);
-    var question3 = new Question('Where is London?', ['England', 'Scotland', 'New England', 'Wales'], 0);
+    QuestionFunc.prototype.showQuestion = function() {
+      console.log(this.question);
+    }
+
+    QuestionFunc.prototype.showAnswers = function() {
+      var i = null;
+      for (i = 0; i < this.answers.length; i++) {
+        console.log(i, this.answers[i]);
+      }
+    }
+
+    QuestionFunc.prototype.checkAnswer = function(answer) {
+      if (answer === this.correctAnswer) {
+        console.log('You got the correct answer');
+      } else {
+        console.log('You got it wrong');
+      }
+    }
+
+    var question1 = new QuestionFunc('What is your name?', ['John', 'Peter', 'Matt', 'Phil'], 2, this.showQuestion);
+    var question2 = new QuestionFunc('What is your favourite football team?', ['QPR', 'Reading', 'Wolves', 'Crystal Palace'], 3);
+    var question3 = new QuestionFunc('Where is London?', ['England', 'Scotland', 'New England', 'Wales'], 0);
 
     var questions = [question1, question2, question3];
 
-    console.log(questions);
+    var randomQuestion = Math.floor(Math.random() * questions.length);
+    
+    questions[randomQuestion].showQuestion();
+    questions[randomQuestion].showAnswers();
+
+    var answer = parseInt(prompt('Please select the correct answer.'));
+    questions[randomQuestion].checkAnswer(answer);
+
   }
 };
 
