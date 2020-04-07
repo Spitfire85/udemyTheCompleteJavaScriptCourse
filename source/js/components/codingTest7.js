@@ -45,19 +45,28 @@ const codingTest7 = {
       }
     }
 
+    function askQuestion() {
+      var questions = [question1, question2, question3];
+
+      var randomQuestion = Math.floor(Math.random() * questions.length);
+      
+      questions[randomQuestion].showQuestion();
+      questions[randomQuestion].showAnswers();
+  
+      var answer = prompt('Please select the correct answer.');      
+
+      if(answer !== 'exit') {
+        questions[randomQuestion].checkAnswer(parseInt(answer));
+        
+        askQuestion();
+      }      
+    }
+
     var question1 = new QuestionFunc('What is your name?', ['John', 'Peter', 'Matt', 'Phil'], 2, this.showQuestion);
     var question2 = new QuestionFunc('What is your favourite football team?', ['QPR', 'Reading', 'Wolves', 'Crystal Palace'], 3);
     var question3 = new QuestionFunc('Where is London?', ['England', 'Scotland', 'New England', 'Wales'], 0);
 
-    var questions = [question1, question2, question3];
-
-    var randomQuestion = Math.floor(Math.random() * questions.length);
-    
-    questions[randomQuestion].showQuestion();
-    questions[randomQuestion].showAnswers();
-
-    var answer = parseInt(prompt('Please select the correct answer.'));
-    questions[randomQuestion].checkAnswer(answer);
+    askQuestion();
 
   }
 };
