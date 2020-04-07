@@ -274,11 +274,11 @@ const objFunc = {
       }
     }
 
-    let johnFriendly = john.present.bind(john, 'friendly', 'morning');
+    let johnFriendly = john.present.bind(john, 'friendly', ' morning ');
 
-    console.log(john.present('formal', 'morning'));
+    console.log(john.present('formal', ' morning '));
 
-    console.log(john.present.call(emily, 'friendly', 'afternoon'));
+    console.log(john.present.call(emily, 'friendly', ' afternoon '));
 
     johnFriendly();
   }
