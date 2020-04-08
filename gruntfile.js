@@ -207,7 +207,7 @@ module.exports = grunt => {
 
       styles: {
         files: 'source/scss/**/*.scss',
-        tasks: ['newer:prettier', 'newer:sasslint', 'sass:build', 'newer:postcss']
+        tasks: ['newer:prettier', 'sass:build', 'newer:postcss']
       },
 
       video: {

@@ -4,7 +4,7 @@ const objFunc = {
     //   name: 'John',
     //   yearOfBirth: 1990,
     //   job: 'teacher'
-    // };    
+    // };
 
     // Function constructor
     // let Person = function(name, yearOfBirth, job) {
@@ -13,7 +13,7 @@ const objFunc = {
     //   this.job = job;
     // };
     // // It's very inefficent to call a method from an constructor function as each time it's called it's created again.
-    // // So we use a prototype    
+    // // So we use a prototype
     // Person.prototype.calculateAge = function () {
     //   console.log(2019 - this.yearOfBirth);
     // }
@@ -22,17 +22,16 @@ const objFunc = {
     // Person.prototype.lastName = 'Smith';
 
     // // New creates and empty object, which then the Person constructor adds properties too
-    // let john = new Person('John', 1990, 'teacher');    
+    // let john = new Person('John', 1990, 'teacher');
     // let jane = new Person('Jane', 1996, 'waitress');
     // let mark = new Person('Mark', 1948, 'retired');
 
     // john.calculateAge();
-    // jane.calculateAge();    
+    // jane.calculateAge();
     // mark.calculateAge();
 
     // console.log(john);
     // console.log(john.hasOwnProperty('lastName'));
-
 
     // Object.create
 
@@ -43,7 +42,7 @@ const objFunc = {
     //   calculateAge: function () {
     //     console.log(2019 - this.yearOfBirth);
     //   }
-    // };    
+    // };
 
     // let john = Object.create(personProto);
     // john.name = 'John';
@@ -102,7 +101,7 @@ const objFunc = {
     //   let arrResult = [];
     //   for (let i = 0; i < arr.length; i++) {
     //     arrResult.push(fn(arr[i]));
-    //   } 
+    //   }
     //   return arrResult;
     // }
 
@@ -131,7 +130,6 @@ const objFunc = {
     // let heartBeat = arrayCalc(ages, maxHeartRate);
     // console.log(heartBeat);
 
-
     //Functions returning functions
     // function interviewQuestion(job) {
     //   if (job === 'designer') {
@@ -158,10 +156,9 @@ const objFunc = {
     // let policeQuestion = interviewQuestion('police');
     // policeQuestion('Peter');
 
-
     // interviewQuestion('teacher')('Matt');
 
-    //IIFE 
+    //IIFE
     // function game () {
     //   const score = Math.random() * 10;
     //   console.log(score >= 5);
@@ -178,7 +175,7 @@ const objFunc = {
     //   const score = Math.random() * 10;
     //   console.log(score >= 5 - goodLuck);
     // })(10);
-    
+
     // function ageTilRetirement(retirement) {
     //   const a = ' years left until retirement';
 
@@ -219,7 +216,7 @@ const objFunc = {
 
     // ageTilRetirement(66)(1990);
 
-        //Functions returning functions
+    //Functions returning functions
     // function interviewQuestion(job) {
     //   if (job === 'designer') {
     //     return function(name) {
@@ -245,7 +242,6 @@ const objFunc = {
     // let policeQuestion = interviewQuestion('police');
     // policeQuestion('Peter');
 
-
     // interviewQuestion('teacher')('Matt');
 
     let john = {
@@ -254,12 +250,16 @@ const objFunc = {
       job: 'teacher',
       present: function(style, timeOfDay) {
         if (style === 'formal') {
-          console.log('Good ' + timeOfDay + ' ladies and gentlemen I\'m ' + this.name+' I\'m a ' + this.job + ' I\'m ' + this.age);
+          console.log(
+            'Good ' + timeOfDay + " ladies and gentlemen I'm " + this.name + " I'm a " + this.job + " I'm " + this.age
+          );
         } else if (style === 'friendly') {
-          console.log('Sup it\'s the' + timeOfDay + 'guys and gals I\'m ' + this.name+' I\'m a ' + this.job + ' I\'m ' + this.age);
+          console.log(
+            "Sup it's the" + timeOfDay + "guys and gals I'm " + this.name + " I'm a " + this.job + " I'm " + this.age
+          );
         }
       }
-    }
+    };
 
     let emily = {
       name: 'Emily',
@@ -267,12 +267,16 @@ const objFunc = {
       job: 'shop keeper',
       present: function(style, timeOfDay) {
         if (style === 'formal') {
-          console.log('Good ' + timeOfDay + ' ladies and gentlemen I\'m ' + this.name+' I\'m a ' + this.job + ' I\'m ' + this.age);
+          console.log(
+            'Good ' + timeOfDay + " ladies and gentlemen I'm " + this.name + " I'm a " + this.job + " I'm " + this.age
+          );
         } else if (style === 'friendly') {
-          console.log('Sup it\'s the ' + timeOfDay + ' guys and gals I\'m ' + this.name+' I\'m a ' + this.job + ' I\'m ' + this.age);
+          console.log(
+            "Sup it's the " + timeOfDay + " guys and gals I'm " + this.name + " I'm a " + this.job + " I'm " + this.age
+          );
         }
       }
-    }
+    };
 
     let johnFriendly = john.present.bind(john, 'friendly', ' morning ');
 

@@ -1,7 +1,6 @@
 /////////////////////////////
 // CODING CHALLENGE
 
-
 /*
 --- Let's build a fun quiz game in the console! ---
 1. Build a function constructor called Question to describe a question. A question should include:
@@ -20,7 +19,7 @@ const codingTest7 = {
   init() {
     console.log('codingTest7');
 
-    function QuestionFunc (question, answers, correctAnswer) {
+    function QuestionFunc(question, answers, correctAnswer) {
       this.question = question;
       this.answers = answers;
       this.correctAnswer = correctAnswer;
@@ -28,14 +27,14 @@ const codingTest7 = {
 
     QuestionFunc.prototype.showQuestion = function() {
       console.log(this.question);
-    }
+    };
 
     QuestionFunc.prototype.showAnswers = function() {
       var i = null;
       for (i = 0; i < this.answers.length; i++) {
         console.log(i, this.answers[i]);
       }
-    }
+    };
 
     QuestionFunc.prototype.checkAnswer = function(answer, callback) {
       var score;
@@ -48,22 +47,22 @@ const codingTest7 = {
       }
 
       this.showAnswer(score);
-    }
+    };
 
     QuestionFunc.prototype.showAnswer = function(score) {
       console.log('Your score is ' + score);
       console.log('--------------');
-    }
+    };
 
     function scoreCheck() {
       var score = 0;
-      return function (correct) {
+      return function(correct) {
         if (correct) {
           score++;
-        } 
+        }
 
         return score;
-      }
+      };
     }
 
     var keepScore = scoreCheck();
@@ -72,30 +71,32 @@ const codingTest7 = {
       var questions = [question1, question2, question3];
 
       var randomQuestion = Math.floor(Math.random() * questions.length);
-      
+
       questions[randomQuestion].showQuestion();
       questions[randomQuestion].showAnswers();
-  
-      var answer = prompt('Please select the correct answer.');      
 
-      if(answer !== 'exit') {
+      var answer = prompt('Please select the correct answer.');
+
+      if (answer !== 'exit') {
         questions[randomQuestion].checkAnswer(parseInt(answer), keepScore);
-        
+
         askQuestion();
-      }      
+      }
     }
 
     var question1 = new QuestionFunc('What is your name?', ['John', 'Peter', 'Matt', 'Phil'], 2, this.showQuestion);
-    var question2 = new QuestionFunc('What is your favourite football team?', ['QPR', 'Reading', 'Wolves', 'Crystal Palace'], 3);
+    var question2 = new QuestionFunc(
+      'What is your favourite football team?',
+      ['QPR', 'Reading', 'Wolves', 'Crystal Palace'],
+      3
+    );
     var question3 = new QuestionFunc('Where is London?', ['England', 'Scotland', 'New England', 'Wales'], 0);
 
     askQuestion();
-
   }
 };
 
 export default codingTest7;
-
 
 /*
 --- Expert level ---
