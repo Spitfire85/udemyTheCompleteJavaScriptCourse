@@ -85,3 +85,6 @@ https://medium.com/@thejasonfile/borrowing-methods-from-a-function-in-javascript
 Call, apply and bind
 https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
 
+Higher order functions
+https://medium.com/@js_tut/higher-order-functions-in-javascript-732dc7a1952d
+
