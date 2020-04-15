@@ -88,3 +88,5 @@ https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
 Higher order functions
 https://medium.com/@js_tut/higher-order-functions-in-javascript-732dc7a1952d
 
+Structure of your JS app
+https://medium.com/@warren2lynch/a-comprehensive-guide-for-flowchart-over-50-examples-785d6dfdc380
