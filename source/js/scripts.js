@@ -8,7 +8,7 @@ import howItWorks from './components/2-how-it-works';
 import DOM from './components/3-dom';
 import objFunc from './components/4-objFunc';
 // import codingTest7 from './components/codingTest7';
-import es6 from './components/es6';
+import es6 from './components/7-es6';
 
 const jsCourse = {
   init() {

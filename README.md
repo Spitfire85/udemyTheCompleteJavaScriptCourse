@@ -90,3 +90,12 @@ https://medium.com/@js_tut/higher-order-functions-in-javascript-732dc7a1952d
 
 Structure of your JS app
 https://medium.com/@warren2lynch/a-comprehensive-guide-for-flowchart-over-50-examples-785d6dfdc380
+
+Template literals
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+String reference
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+Arrow functions and lexical this
+https://hackernoon.com/javascript-es6-arrow-functions-and-lexical-this-f2a3e2a5e8c4
