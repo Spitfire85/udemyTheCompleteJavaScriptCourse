@@ -99,3 +99,17 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 Arrow functions and lexical this
 https://hackernoon.com/javascript-es6-arrow-functions-and-lexical-this-f2a3e2a5e8c4
+
+Destructuring
+https://medium.com/@MentallyFriendly/es6-constructive-destructuring-793ac098d138
+https://css-tricks.com/new-favorite-es6-toy-destructured-objects-parameters/
+
+Spread operator
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
+
+Spread operator Vs Rest operator/parameters
+https://medium.com/@luke_smaki/javascript-es6-spread-operator-and-rest-parameters-b3e89d112281
+
+Default parameters
+https://www.sitepoint.com/es6-default-parameters/
