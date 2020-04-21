@@ -119,3 +119,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 Map vs Objects
 https://medium.com/front-end-weekly/es6-map-vs-object-what-and-when-b80621932373
+
+Concurrency model and the event loop
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+
+Web APIs
+https://developer.mozilla.org/en-US/docs/Web/API

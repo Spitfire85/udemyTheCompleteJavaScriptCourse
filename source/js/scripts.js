@@ -27,7 +27,7 @@ const jsCourse = {
 
     // objFunc.init();
     // codingTest7.init();
-    es6.init();
+    // es6.init();
   }
 };
 

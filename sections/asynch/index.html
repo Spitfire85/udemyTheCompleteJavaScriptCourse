@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Asynchronous JavaScript</title>
+</head>
+<body>
+  <h1>Asynchronous JavaScript</h1>
+  <script>
+    // const second = () => {
+    //   setTimeout(() => {
+    //     console.log('setTimeout');
+    //   }, 2000)
+    // };
+
+    // const first = () => {      
+    //   console.log('first');
+    //   second();
+    //   console.log('over');
+    // };   
+
+    // first();
+    // console.log('test');
+
+    // function getRecipe() {
+    //   setTimeout(() => {
+    //     const recipeID = [1234, 224, 673, 367];
+    //     console.log(recipeID);
+
+        // setTimeout(id => {
+        //   const recipe = {
+        //     title: 'Pasta',
+        //     publisher: 'Matt'        
+        //   }
+        //   console.log(`Recipe number ${id}: Lovely ${recipe.title} by ${recipe.publisher}`);
+        
+    //       setTimeout(publisher => {
+    //         const recipe2 = {
+    //           title: 'Pizza',
+    //           publisher: 'Matt'        
+    //         }
+    //         console.log(`Recipe number ${id}: Lovely ${recipe2.title} by ${recipe2.publisher}`);
+    //       }, 1500, recipe2.publisher);
+    //     }, 1500, recipeID[2]);
+    //   }, 1500);      
+    // }
+
+    // getRecipe();
+
+    // const getIDs = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve([1234, 224, 673, 367]);
+    //   }, 1500);
+    // });
+
+    // const getRecipe = recID => {
+    //   return new Promise((resolve, reject) => {
+    //   setTimeout(ID => {          
+    //       const recipe = {
+    //         title: 'Pasta',
+    //         publisher: 'Matt'        
+    //       };
+    //       resolve(`Recipe number ${ID}: Lovely ${recipe.title} by ${recipe.publisher}`);
+    //     }, 1500, recID);
+    //   });
+    // };
+
+    // const getRelated = publisher => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(pub => {
+    //       const recipe = {
+    //         title: 'Pizza',
+    //         publisher: 'Matt'        
+    //       };
+    //       resolve(`${pub}: ${recipe.title}`);
+    //     }, 1500, publisher)
+    //   });
+    // };
+
+    // getIDs.then(IDs => {
+    //   console.log(IDs);
+    //   return getRecipe(IDs[2]);
+    // })
+    // .then(recipe => {
+    //   console.log(recipe);
+    //   return getRelated('Matt');
+    // })
+    // .then(recipe => {
+    //   console.log(recipe);
+    // })
+    // .catch(error => {
+    //   console.log('ERROR');
+    // });
+
+
+
+    // async function getRecipesAW() {
+    //   const IDs = await getIDs;
+    //   console.log(IDs);
+
+    //   const recipe = await getRecipe(IDs[2]);
+    //   console.log(recipe);
+
+    //   const related = await getRelated('Matt');
+    //   console.log(related);
+
+    //   return recipe;
+    // }
+
+    // getRecipesAW().then(result => console.log(`This meal is called ${result}`));
+    // const getWeather = (locID) => {
+    //   fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${locID}/`)
+    //   .then(result => {
+    //     console.log(result);
+    //     return result.json();
+    //   })
+    //   .then(data => {
+    //     const today = data.consolidated_weather[0];
+    //     console.log(`Temps ${data.title} will be between ${today.min_temp}c and ${today.max_temp}c`);
+    //   }).catch(error => {
+    //     console.log(error);
+    //   });
+    // }
+    // getWeather(44418);
+
+
+    async function getWeatherAW(locID) {
+      try {
+        const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${locID}/`);
+        const data = await result.json();
+        const today = data.consolidated_weather[0];
+        console.log(`Temps in ${data.title} will be between ${today.min_temp}c and ${today.max_temp}c`);
+        return data;
+      } catch (error) {
+        console.log(error);
+      }      
+    }
+    let dataLondon = getWeatherAW(44418).then(data =>{
+      dataLondon = data
+      console.log(dataLondon);
+    });
+    
+    // getWeatherAW(44418);
+    
+  </script>
+</body>
+</html>
