@@ -340,34 +340,124 @@
 // var emily = new SmithPerson('Emily', 1983, 'Diaz', 'Spainish');
 // console.log(johnSmith, emily);
 
-const question = new Map();
-question.set('question', 'What is your favourite football team?');
-question.set(1, 'Wolves');
-question.set(2, 'Palace');
-question.set(3, 'Arsenal');
-question.set(4, 'Man U');
-question.set('correct', 2);
-question.set(true, 'Correct answer');
-question.set(false, 'Incorrect team!');
+// const question = new Map();
+// question.set('question', 'What is your favourite football team?');
+// question.set(1, 'Wolves');
+// question.set(2, 'Palace');
+// question.set(3, 'Arsenal');
+// question.set(4, 'Man U');
+// question.set('correct', 2);
+// question.set(true, 'Correct answer');
+// question.set(false, 'Incorrect team!');
 
-// if(question.has(4)){
-//   // question.delete(4);
-//   console.log('Answer 4 is here');
+// // if(question.has(4)){
+// //   // question.delete(4);
+// //   console.log('Answer 4 is here');
+// // }
+// // question.clear();
+
+// console.log(question.get('question'));
+// // console.log(question.size);
+// // console.log(question);
+
+// // question.forEach((value, key) => console.log(`this is ${key} and this is it's value ${value}`));
+// for (let [key, value] of question.entries()) {
+//   // console.log(`this is ${key} and this is it's value ${value}`);
+
+//   if (typeof(key) === 'number') {
+//     console.log(`Answers ${key}: ${value}`);
+//   }
 // }
-// question.clear();
 
-console.log(question.get('question'));
-// console.log(question.size);
-// console.log(question);
+// const ans = parseInt(prompt('What is the answer?'));
+// console.log(question.get(ans === question.get('correct')));
 
-// question.forEach((value, key) => console.log(`this is ${key} and this is it's value ${value}`));
-for (let [key, value] of question.entries()) {
-  // console.log(`this is ${key} and this is it's value ${value}`);
+//CLASSES
 
-  if (typeof(key) === 'number') {
-    console.log(`Answers ${key}: ${value}`);
+// var Person5 = function(name, yearOfBirth, job) {
+//   this.name = name;
+//   this.yearOfBirth = yearOfBirth;
+//   this.job = job;
+// }
+
+// Person5.prototype.calculateAge = function() {
+//   var age = new Date().getFullYear - this.yearOfBirth;
+//   console.log(age);
+// }
+
+// var john5 = new Person5('John', 1990, 'teacher');
+// console.log(john5);
+
+// class Person6 {
+//   constructor (name, yearOfBirth, job) {
+//     this.name = name;
+//     this.yearOfBirth = yearOfBirth;
+//     this.job = job;
+//   }
+
+//   calculateAge() {
+//     var age = new Date().getFullYear - this.yearOfBirth;
+//     console.log(age);
+//   }
+// }
+
+// const john6 = new Person6('John', 1990, 'teacher');
+// console.log(john6);
+
+//SubClasses
+// var Person5 = function(name, yearOfBirth, job) {
+//   this.name = name;
+//   this.yearOfBirth = yearOfBirth;
+//   this.job = job;
+// }
+
+// Person5.prototype.calculateAge = function() {
+//   var age = new Date().getFullYear() - this.yearOfBirth;
+//   console.log(age);
+// }
+
+// var Athlete5 = function(name, yearOfBirth, job, olympicGames, medals) {
+//   Person5.call(this, name, yearOfBirth, job);
+//   this.olympicGames = olympicGames;
+//   this.medals = medals;
+// }
+
+// Athlete5.prototype = Object.create(Person5.prototype);
+// Athlete5.prototype.wonMedal = function() {
+//   this.medals++;
+//   console.log(this.medals);
+// }
+
+// var john = new Athlete5('John', 1990, 'boxer', 3, 3);
+// john.calculateAge();
+// john.wonMedal();
+
+class Person6 {
+  constructor (name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+  }
+
+  calculateAge() {
+    var age = new Date().getFullYear() - this.yearOfBirth;
+    console.log(age);
   }
 }
 
-const ans = parseInt(prompt('What is the answer?'));
-console.log(question.get(ans === question.get('correct')));
+class Athlete6 extends Person6 {
+  constructor(name, yearOfBirth, job, olympicGames, medals) {
+    super(name, yearOfBirth, job);
+    this.olympicGames = olympicGames;
+    this.medals = medals;
+  }
+
+  wonMedal() {
+    this.medals++
+    console.log(this.medals);
+  }
+}
+
+const mark = new Athlete6('Mark', 1990, 'Boxer', 3, 3);
+mark.wonMedal();
+mark.calculateAge();

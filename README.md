@@ -113,3 +113,9 @@ https://medium.com/@luke_smaki/javascript-es6-spread-operator-and-rest-parameter
 
 Default parameters
 https://www.sitepoint.com/es6-default-parameters/
+
+Map
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+Map vs Objects
+https://medium.com/front-end-weekly/es6-map-vs-object-what-and-when-b80621932373
