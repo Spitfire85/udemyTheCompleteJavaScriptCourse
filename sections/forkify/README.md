@@ -130,3 +130,6 @@ https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-
 
 Fetch or Axios
 https://blog.logrocket.com/axios-or-fetch-api/
+
+slice(), splice(), & split()
+https://www.freecodecamp.org/news/lets-clear-up-the-confusion-around-the-slice-splice-split-methods-in-javascript-8ba3266c29ae/

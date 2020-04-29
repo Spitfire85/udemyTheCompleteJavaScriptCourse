@@ -11,8 +11,16 @@ export const clearInput = () => {
   elements.searchInput.value = '';
 };
 
+export const highlightSelected = id => {
+  const resultsArr = Array.from(document.querySelectorAll('.results__link'));
+  resultsArr.forEach(el => {
+    el.classList.remove('results__link--active');
+  });
+  document.querySelector(`.results__link[href="#${id}"]`).classList.add('results__link--active');
+};
+
 //Pasta with Pesto Cream Sauce
-const limitRecipeTitle = (title, limit = 17) => {
+export const limitRecipeTitle = (title, limit = 17) => {
   const newTitle = [];
   if (title.length > limit) {
     title.split(' ').reduce((acc, cur) => {
