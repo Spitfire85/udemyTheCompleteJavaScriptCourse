@@ -48,7 +48,7 @@
     "grunt-ssimin": "~0.1.1",
     "grunt-w3c-html-validation": "^0.1.8",
     "load-grunt-tasks": "^4.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "prettier": "^1.17.0",
     "sass-lint-auto-fix": "^0.17.0",
     "susy": "^3.0.5"
